@@ -2,8 +2,11 @@ name: Daily Repository Update
 
 on:
   schedule:
-    - cron: '15 10 * * *'   # Runs every day at 10:15 UTC
-  workflow_dispatch:        # Allows manual trigger for testing
+    - cron: '15 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-repo:
